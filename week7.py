@@ -1,4 +1,5 @@
 import streamlit as st
+import sklearn
 from sklearn.cluster import KMeans
 from sklearn import preprocessing
 from sklearn.mixture import GaussianMixture
@@ -42,7 +43,6 @@ def main():
     plt.subplot(1, 3, 3)
     plt.scatter(X.Petal_Length, X.Petal_Width, c=colormap[y_cluster_gmm], s=40)
     plt.title('GMM Classification')
-
     # Display the plots
     st.pyplot()
 
